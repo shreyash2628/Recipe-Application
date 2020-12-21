@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DashBoardActivity"
+    android:layout_marginLeft="10dp">
+
+
+
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:orientation="vertical"
+                android:layout_marginTop="20dp">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nunito_semibold"
+                    android:text="What would you like "
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nunito_semibold"
+                    android:text="to cook today?"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"/>
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_marginTop="15dp"
+                    >
+
+                    <HorizontalScrollView
+                        android:id="@+id/mainLayoutHorScrollView_id"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:scrollbarSize="0dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/mainToolbar_id">
+
+
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="0dp"
+                            android:layout_marginRight="5dp">
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/breakfastcard"
+                                android:layout_width="80dp"
+                                android:layout_height="100dp"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginEnd="5dp"
+                                android:foreground="?attr/selectableItemBackground"
+                                app:cardCornerRadius="5dp"
+                                app:cardElevation="1dp"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/mainTodaysTotalUnitsOrderLayout_id">
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                    <ImageView
+                                        android:id="@+id/breakfast"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="80dp"
+
+                                        android:src="@drawable/omllete"
+                                        android:scaleType="centerCrop"/>
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@id/breakfast"
+                                        android:text="Breakfast"
+                                        android:textAlignment="center"
+                                        android:textSize="15sp"
+                                        android:textStyle="bold" />
+
+
+
+                                </RelativeLayout>
+
+                            </androidx.cardview.widget.CardView>
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/lunchcard"
+                                android:layout_width="80dp"
+                                android:layout_height="100dp"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginEnd="5dp"
+                                android:foreground="?attr/selectableItemBackground"
+                                app:cardCornerRadius="5dp"
+                                app:cardElevation="1dp"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/mainTodaysTotalUnitsOrderLayout_id">
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                    <ImageView
+                                        android:id="@+id/lunch"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="80dp"
+
+                                        android:src="@drawable/lunch"
+                                        android:scaleType="centerCrop"/>
+
+                                    <TextView
+                                        android:layout_below="@id/lunch"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:textAlignment="center"
+                                        android:text="Lunch"
+                                        android:textSize="15sp"
+                                        android:textStyle="bold" />
+
+
+
+                                </RelativeLayout>
+
+                            </androidx.cardview.widget.CardView>
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/dinnercard"
+                                android:layout_width="80dp"
+                                android:layout_height="100dp"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginEnd="5dp"
+                                android:foreground="?attr/selectableItemBackground"
+                                app:cardCornerRadius="5dp"
+                                app:cardElevation="1dp"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/mainTodaysTotalUnitsOrderLayout_id">
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                    <ImageView
+                                        android:id="@+id/dinner"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="80dp"
+
+                                        android:src="@drawable/dinn"
+                                        android:scaleType="centerCrop"/>
+
+                                    <TextView
+                                        android:layout_below="@id/dinner"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:textAlignment="center"
+                                        android:text="Dinner"
+                                        android:textSize="15sp"
+                                        android:textStyle="bold" />
+
+
+
+                                </RelativeLayout>
+
+                            </androidx.cardview.widget.CardView>
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/desertcard"
+                                android:layout_width="80dp"
+                                android:layout_height="100dp"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginEnd="5dp"
+                                android:foreground="?attr/selectableItemBackground"
+                                app:cardCornerRadius="5dp"
+                                app:cardElevation="1dp"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/mainTodaysTotalUnitsOrderLayout_id">
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                    <ImageView
+                                        android:id="@+id/desert"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="80dp"
+
+                                        android:src="@drawable/desert"
+                                        android:scaleType="centerCrop"/>
+
+                                    <TextView
+                                        android:layout_below="@id/desert"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:textAlignment="center"
+                                        android:text="Dessert"
+                                        android:textSize="15sp"
+                                        android:textStyle="bold" />
+
+
+
+                                </RelativeLayout>
+
+                            </androidx.cardview.widget.CardView>
+
+
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    </HorizontalScrollView>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="25dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="0dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:fontFamily="@font/nunito_semibold"
+                    android:text="Recommended "
+                    android:textColor="@color/black"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+
+                <androidx.cardview.widget.CardView
+                    android:backgroundTint="#B6B1B1"
+                    android:id="@+id/mainTopCard_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    android:layout_margin="8dp"
+                    android:elevation="0dp"
+                    android:visibility="visible"
+                    app:cardCornerRadius="8dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <com.smarteist.autoimageslider.SliderView
+                        android:id="@+id/mainImageSlider_id"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:visibility="visible"
+                        app:sliderAnimationDuration="600"
+                        app:sliderAutoCycleDirection="right"
+                        app:sliderAutoCycleEnabled="true"
+                        app:sliderCircularHandlerEnabled="true"
+                        app:sliderIndicatorAnimationDuration="600"
+                        app:sliderIndicatorGravity="center_horizontal|bottom"
+                        app:sliderIndicatorMargin="15dp"
+                        app:sliderIndicatorOrientation="horizontal"
+                        app:sliderIndicatorRadius="1dp"
+                        app:sliderIndicatorSelectedColor="#5a5a5a"
+                        app:sliderIndicatorUnselectedColor="#fff"
+                        app:sliderScrollTimeInSec="4"
+                        app:sliderStartAutoCycle="true" />
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+
+
+
+</LinearLayout>
